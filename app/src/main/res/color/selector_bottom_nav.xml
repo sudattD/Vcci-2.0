@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:state_selected="true" android:state_window_focused="false" android:color="@color/chips_selected_color" />-->
+    <item android:color="@color/unselected_color_bottom_bar" android:state_checked="false" />
+    <item android:color="@color/dodgerBlue" android:state_checked="true" />
+
+</selector>

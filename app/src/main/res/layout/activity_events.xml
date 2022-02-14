@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_menu_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent_black"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16dp"
+            tools:text="Upcoming Events" />
+
+        <RelativeLayout
+            android:id="@+id/rl_events_listing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_menu_title"
+            android:layout_marginTop="@dimen/_2dp"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:padding="@dimen/_4dp"/>
+
+            <TextView
+                android:id="@+id/tv_no_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_record_found"
+                android:drawableTop="@drawable/ic_notifications_black_24dp"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/_16dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

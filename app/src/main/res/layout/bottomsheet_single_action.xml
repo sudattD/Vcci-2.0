@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/bottom_sheet_margin"
+        android:paddingRight="@dimen/bottom_sheet_margin"
+        android:paddingTop="@dimen/margin_left"
+        android:paddingStart="@dimen/bottom_sheet_margin"
+        android:paddingEnd="@dimen/bottom_sheet_margin">
+
+        <LinearLayout
+            android:id="@+id/llBottomSheetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBottomSheetTitle"
+                android:fontFamily="@font/bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_15dp"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/tvBottomSheetSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_left"
+                android:visibility="gone"
+                tools:text="SubTitle"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBottomSheetDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_left"
+            tools:text="Description" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/accent_btn_size"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginRight="@dimen/_20dp"
+        android:textAllCaps="false"
+        tools:text="Next" />
+
+</LinearLayout>

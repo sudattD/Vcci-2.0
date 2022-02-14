@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+    defaultConfig {
+        applicationId "sbnri.consumer.android"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.code
+        versionName versions.name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    viewBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    ndkVersion "21.3.6528147"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    androidTestImplementation("androidx.test.espresso:espresso-core:$versions.espresso", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation "androidx.appcompat:appcompat:$versions.appcompat"
+    implementation "androidx.legacy:legacy-support-v4:$versions.supportLibs"
+    implementation "androidx.cardview:cardview:$versions.supportLibs"
+    implementation "androidx.recyclerview:recyclerview:$versions.supportLibs"
+    implementation "androidx.browser:browser:$versions.browser"
+    implementation "androidx.exifinterface:exifinterface:$versions.exifinterface"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+    implementation "androidx.room:room-runtime:$versions.room"
+    implementation "androidx.multidex:multidex:$versions.multiDex"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation "com.google.dagger:dagger:$versions.dagger"
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+    implementation "com.jakewharton:butterknife:$versions.butterKnife"
+    kapt "com.jakewharton:butterknife-compiler:$versions.butterKnife"
+    implementation "com.google.android.material:material:$versions.material"
+    implementation "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+    implementation "com.orhanobut:hawk:$versions.hawk"
+    implementation "com.squareup.okhttp3:logging-interceptor:$versions.okHttp"
+    implementation "com.squareup.picasso:picasso:$versions.picasso"
+    implementation "com.jakewharton.picasso:picasso2-okhttp3-downloader:$versions.picassoOkHttpDownloader"
+    implementation "androidx.cardview:cardview:$versions.supportLibs"
+    implementation "com.google.android.gms:play-services-auth:$versions.googleServices"
+    implementation "com.flipboard:bottomsheet-core:$versions.flipboard"
+    implementation "com.orhanobut:logger:$versions.logger"
+    implementation "com.tbruyelle.rxpermissions2:rxpermissions:$versions.rxPermissions"
+    //biometric fingerprint sensor
+    implementation "androidx.biometric:biometric:$versions.biometric_version"
+    implementation "com.google.android.gms:play-services-location:$versions.playServices"
+    implementation "com.google.android.libraries.places:places:$versions.places"
+    //places
+    implementation "com.google.android.libraries.places:places:$versions.places"
+
+    implementation 'androidx.transition:transition:1.3.0-rc02'
+
+    //Firebase
+    implementation "com.google.firebase:firebase-auth:$versions.firebaseAuth"
+    implementation "com.google.firebase:firebase-database:$versions.firebaseDataBase"
+    implementation "com.google.firebase:firebase-analytics:$versions.firebaseAnalytics"
+    implementation "com.google.firebase:firebase-dynamic-links:$versions.firebase"
+    implementation 'com.google.firebase:firebase-installations:17.0.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+}

@@ -1,0 +1,122 @@
+ext.versions = [
+        code                   : 1,
+        name                   : '1.0',
+
+        minSdk                 : 24,
+        targetSdk              : 29,
+        compileSdk             : 29,
+        buildTools             : '29.0.0',
+
+        androidGradlePlugin    : '2.2.2',
+
+        //Support Libraries
+        supportLibs            : '1.0.0',
+
+        appcompat              : '1.0.2',
+
+        //ButterKnife
+        butterKnife            : '10.2.3',
+
+        material               : '1.1.0-alpha02',
+
+        browser                : '1.0.0',
+
+        exifinterface          : '1.0.0',
+
+        //Retrofit
+        retrofit               : '2.6.0',
+        okHttp                 : '3.9.1',
+
+        //RxAndroid
+        rxJava                 : '2.1.16',
+        rxAndroid              : '2.0.2',
+        rxPermissions          : '0.9.4@aar',
+
+        //Image Cache
+        picasso                : '2.71828',
+        picassoOkHttpDownloader: '1.0.2',
+
+        //Logger
+        logger                 : '1.15',
+
+        //Testing
+        junit                  : '4.12',
+        espresso               : '3.1.0',
+
+        //wasabeef-loaders
+        wasabeefLoaders        : '2.1.3',
+
+        //flipboard-bottomsheet
+        flipboard              : '1.5.3',
+
+        //multidex
+        multiDex               : '2.0.1',
+
+        //hawk
+        hawk                   : '2.0.1',
+
+        //firebase
+        firebase               : '17.0.0',
+
+        firebaseMessaging      : '19.0.0',
+
+        //cleverTap
+        cleverTap              : '3.6.4',
+
+        //branch.io
+        branch                 : '2.+',
+
+        //constraint Layout
+        constraintLayout       : '2.0.1',
+
+        //Razor Pay
+        razorPay               : '1.5.8',
+
+        alexander              : '1.1.0',
+
+        //Facebook SDK
+        facebookSdk            : '[4,5)',
+
+        dagger                 : '2.11',
+
+        jsoup                  : '1.11.2',
+
+        googleMaps             : '0.2.5',
+
+        room                   : '2.1.0-alpha04',
+
+        stripe                 : '10.3.1',
+
+        biometric_version      : '1.0.1',
+
+        crashlytics            : '2.9.8@aar',
+
+        libphonenumber         : '8.12.0',
+
+        //WorkManager
+        workManager            : '1.0.0-beta01',
+
+        places                 : '1.1.0',
+
+        //google-playservices
+        playServices           : '17.0.0',
+
+        playServicesApiPhone   : '16.0.0',
+
+        vision                 : '17.0.2',
+
+        safetynet              : '17.0.0',
+
+        installreferrer        : '1.1.1',
+
+        googleServices          : '18.1.0',
+
+        firebaseAuth : '19.3.2',
+
+        firebaseDataBase : '19.4.0',
+
+        firebaseAnalytics : '17.5.0'
+
+
+
+]

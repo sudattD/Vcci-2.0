@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    app:layoutDescription="@xml/activity_start_application_intro_scene">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="@dimen/_10dp"
+        android:layout_height="@dimen/_16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/outerConstrain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/video_view_bg_curved"
+        android:orientation="vertical"
+        app:layoutDescription="@xml/activity_start_application_intro_xml_outerconstrain_scene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/start_application_bg"
+            android:orientation="vertical"
+            app:layoutDescription="@xml/activity_start_application_intro_xml_constraintlayout_scene"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoView"
+            app:motionDebug="SHOW_ALL">
+
+
+            <sbnri.consumer.android.common.CircleImageView
+                android:id="@+id/imageView6"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/get_approved"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <sbnri.consumer.android.common.CircleImageView
+                android:id="@+id/imageView9"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/get_approved"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <sbnri.consumer.android.common.CircleImageView
+                android:id="@+id/imageView10"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/get_approved"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <sbnri.consumer.android.common.CircleImageView
+                android:id="@+id/imageView11"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/get_approved"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="69dp"
+                android:fontFamily="@font/bold"
+                android:text="We worked with banks to make your work easier and faster."
+                android:textColor="@color/darkBlueGrey"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="112dp"
+                android:fontFamily="@font/medium"
+                android:text="Open your accounts in 10 mins,with these documents."
+                android:textColor="@color/darkBlueGrey"
+                android:textSize="@dimen/font_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+            <ImageView
+                android:id="@+id/iv_checked_one"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:srcCompat="@drawable/ic_done_green_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_checked_two"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_checked_one"
+                app:srcCompat="@drawable/ic_done_green_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_checked_three"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_checked_two"
+                app:srcCompat="@drawable/ic_done_green_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_checked_four"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_checked_three"
+                app:srcCompat="@drawable/ic_done_green_24dp" />
+
+            <TextView
+                android:id="@+id/tv_checked_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/bold"
+                android:text="Passport's front picture"
+                android:textColor="@color/greenish"
+                android:textSize="@dimen/font_12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_checked_one"
+                app:layout_constraintStart_toEndOf="@+id/iv_checked_one"
+                app:layout_constraintTop_toTopOf="@+id/iv_checked_one" />
+
+            <TextView
+                android:id="@+id/tv_checked_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/bold"
+                android:text="VISA copy"
+                android:textColor="@color/greenish"
+                android:textSize="@dimen/font_12sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_checked_two"
+                app:layout_constraintTop_toBottomOf="@+id/tv_checked_one" />
+
+            <TextView
+                android:id="@+id/tv_checked_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/bold"
+                android:text="PAN card copy"
+                android:textColor="@color/greenish"
+                android:textSize="@dimen/font_12sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_checked_three"
+                app:layout_constraintTop_toBottomOf="@+id/tv_checked_two" />
+
+            <TextView
+                android:id="@+id/tv_checked_four"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/bold"
+                android:text="Address Proof Copy"
+                android:textColor="@color/greenish"
+                android:textSize="@dimen/font_12sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_checked_four"
+                app:layout_constraintTop_toBottomOf="@+id/tv_checked_three" />
+
+            <Button
+                android:id="@+id/btn_start_application"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+        <!--
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintDimensionRatio="1.87"
+
+            />
+    -->
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

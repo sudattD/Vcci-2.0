@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="isOnTablet">false</bool>
+    <bool name="configuration_for_receiver_service">true</bool>
+    <bool name="configuration_for_receiver_service_version_2">false</bool>
+</resources>

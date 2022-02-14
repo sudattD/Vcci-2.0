@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlueGrey"
+    tools:context=".onboarding.OnBoardingActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/screen_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_indicator"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_35dp"
+        app:layout_constrainedHeight="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabIndicatorHeight="@dimen/_0dp">
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <Button
+        android:id="@+id/signUpGoogle"
+        style="@style/signupButtonTheme"
+        android:layout_width="267dp"
+        android:layout_height="@dimen/_48dp"
+        android:layout_marginTop="20dp"
+
+        android:fontFamily="@font/bold"
+        android:text="@string/sign_up_with_google"
+        android:textColor="@color/offWhite"
+        android:textSize="@dimen/font_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_indicator"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/btnEmail"
+        style="@style/FlatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:background="@null"
+        android:drawablePadding="@dimen/_3dp"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpGoogle" />
+
+
+
+    <TextView
+        android:id="@+id/tvTermsAndCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:alpha="0.25"
+        android:fontFamily="@font/medium"
+        android:gravity="center"
+        android:letterSpacing="0.03"
+        android:text="@string/terms_and_condition"
+        android:textAllCaps="false"
+        android:textColor="@color/offWhite"
+        android:textSize="@dimen/font_11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Agree and continue with \nterms and conditions" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

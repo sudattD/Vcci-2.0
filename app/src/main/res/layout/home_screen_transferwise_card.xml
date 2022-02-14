@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="@dimen/_15dp"
+        app:cardCornerRadius="@dimen/_16dp"
+        android:background="@color/white"
+        app:cardElevation="@dimen/_0dp"
+
+        >
+
+        <RelativeLayout
+
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="328dp"
+            android:layout_margin="@dimen/_10dp"
+            android:background="@drawable/background_curve_transferwise"
+
+            android:padding="@dimen/_20dp">
+
+            <FrameLayout
+                android:id="@+id/topview"
+                android:layout_width="@dimen/_125dp"
+                android:layout_height="@dimen/_125dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/outer_circle_gradient">
+
+                <TextView
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="@dimen/_100dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:background="@drawable/white_circle"
+                    android:gravity="center"
+                    android:text="@string/transferwise_money"
+                    android:textColor="@color/greenFundTransfer"
+                    android:textSize="@dimen/font_18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/centreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topview"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30dp"
+                android:text="@string/transferwise_text"
+                android:textColor="@color/darkBlueGrey"
+
+                />
+
+            <Button
+                android:layout_below="@id/centreview"
+                style="@style/FundTransferButton" />
+
+
+        </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="332dp"
+        android:layout_height="71dp"
+        android:layout_gravity="bottom|center"
+        android:gravity="center"
+        android:textSize="@dimen/font_13sp"
+        android:text="@string/transferwise_detail"
+        android:textColor="@color/darkBlueGrey"
+        android:maxEms="15"/>
+
+
+</androidx.cardview.widget.CardView>

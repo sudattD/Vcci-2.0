@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_light_back"
+        android:paddingStart="@dimen/_7dp"
+        android:layout_marginTop="@dimen/_10dp"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <TextView
+        android:id="@+id/tv_name_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:text="@string/hi_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_20sp"
+        android:layout_marginTop="@dimen/_32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_name_label2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:text="Welcome aboard"
+        android:textColor="@color/peachyPink"
+        android:textSize="@dimen/font_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_label" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="340dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="179dp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:alpha="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline18" />
+
+    <TextView
+        android:id="@+id/tv_all_yout_docs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0.9"
+        android:gravity="center"
+        android:fontFamily="@font/medium"
+        android:text="@string/your_docs_as_repo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <Button
+        android:id="@+id/btn_letsbegin"
+        style="@style/LetsBeginButton"
+        android:layout_width="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:text="Let's begin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/tv_all_yout_docs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="69dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="60dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_label2">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="30dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline177"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="340dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline155"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="30dp" />
+
+        <ImageView
+            android:id="@+id/iv_step_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/iv_step_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline45"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:srcCompat="@drawable/apply_online" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="25dp" />
+
+        <TextView
+            android:id="@+id/tv_header_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="0.90"
+            android:fontFamily="@font/bold"
+            android:text="Apply Online"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_one"
+            app:layout_constraintTop_toTopOf="@+id/iv_step_one" />
+
+        <TextView
+            android:id="@+id/tv_subheader_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="0.90"
+            android:fontFamily="@font/bold"
+            android:text="Under 10 minutes"
+            android:textColor="@color/label_under10_mins"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_one"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_one" />
+
+
+        <TextView
+            android:id="@+id/tv_footer_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:alpha="0.40"
+            android:fontFamily="@font/medium"
+            android:text="Submit your initial application in just a few clicks"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_step_one"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_one"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subheader_one"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/iv_step_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/iv_step_three"
+            app:layout_constraintStart_toStartOf="@+id/guideline155"
+            app:layout_constraintTop_toBottomOf="@+id/iv_step_one"
+            app:srcCompat="@drawable/get_approved" />
+
+        <TextView
+            android:id="@+id/tv_header_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="0.90"
+            android:fontFamily="@font/bold"
+            android:text="Get Approved"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_one"
+            app:layout_constraintTop_toTopOf="@+id/iv_step_two" />
+
+
+        <TextView
+            android:id="@+id/tv_subheader_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="0.90"
+            android:fontFamily="@font/bold"
+            android:text="Only in few hours"
+            android:textColor="@color/label_under10_mins"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_two"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_two" />
+
+        <TextView
+            android:id="@+id/tv_footer_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:alpha="0.40"
+            android:fontFamily="@font/medium"
+            android:text="We will receive your information once the KYC is done"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_two"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subheader_two" />
+
+
+        <ImageView
+            android:id="@+id/iv_step_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline155"
+            app:layout_constraintTop_toBottomOf="@+id/iv_step_two"
+            app:srcCompat="@drawable/book_fd" />
+
+
+        <TextView
+            android:id="@+id/tv_header_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="0.90"
+            android:fontFamily="@font/bold"
+            android:text="Book Fixed Deposit"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_three"
+            app:layout_constraintTop_toTopOf="@+id/iv_step_three" />
+
+        <TextView
+            android:id="@+id/tv_subheader_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="0.90"
+            android:fontFamily="@font/bold"
+            android:text="Same day"
+            android:textColor="@color/label_under10_mins"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_three"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_three" />
+
+        <TextView
+            android:id="@+id/tv_footer_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:alpha="0.40"
+            android:fontFamily="@font/medium"
+            android:text="Book your FD in just one day and some more text here"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline177"
+            app:layout_constraintStart_toEndOf="@+id/iv_step_three"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subheader_three" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

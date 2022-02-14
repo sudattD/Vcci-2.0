@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvHomeFragment"
+            style="@style/NestedScrollViewScrollBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/extra_light_gray"
+
+                android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlHomeBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="@dimen/_220dp">
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/vpHomeBanner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvCircleIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/_12dp"
+                                tools:listitem="@layout/item_circle_indicator" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_32dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvActions"
+                        style="@style/ActionHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/home_margin_left"
+                        android:paddingLeft="@dimen/home_margin_left"
+                        android:paddingBottom="@dimen/_6dp"
+                        android:text="Welcome to"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHomeItems"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvAppVersion"
+                    style="@style/SmallBookFaded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:text="" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+</FrameLayout>

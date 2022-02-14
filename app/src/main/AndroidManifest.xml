@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="sbnri.consumer.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:name=".SBNRIApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:allowBackup="false"
+        tools:ignore="GoogleAppIndexingWarning,ManifestResource"
+        android:banner="@mipmap/ic_launcher">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/maps_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+
+            <!-- deep link -->
+
+            <intent-filter android:autoVerify="true">
+                <data
+                    android:host="open"
+                    android:scheme="@string/branch_uri_scheme" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/host_link"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/host_alternate_link"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/host_link_test"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/host_alternate_link_test"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".home.HomeActivity"
+            android:label="SBNRI"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity android:name=".aboutus.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity android:name=".committees.CommitteesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity android:name=".dignnitaries.DignitariesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".onboarding.OnBoardingActivity"
+            android:label="SBNRI"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".events.EventsActivity"
+            android:label="SBNRI"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".events.EventDetailsActivity"
+            android:label="SBNRI"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".membership.MembershipActivity"
+            android:label="SBNRI"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".gallery.GalleryActivity"
+            android:label="SBNRI"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".EmailConfirmation.EmailConfirmationActivity"
+            android:label="SBNRI"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            />
+
+        <receiver
+            android:name=".receivers.NetworkChangeReceiver"
+            android:enabled="@bool/configuration_for_receiver_service"
+            android:exported="@bool/configuration_for_receiver_service">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

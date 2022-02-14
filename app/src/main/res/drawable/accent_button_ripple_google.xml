@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/darkBlueGrey">
+    <!-- android:color="@color/divider_gray" -->
+
+    <item
+        android:id="@android:id/mask"
+        android:drawable="@drawable/button_dodgerblue_solid_google" />
+
+    <item>
+        <selector>
+            <item android:drawable="@drawable/button_dodgerblue_solid_google" />
+        </selector>
+    </item>
+</ripple>

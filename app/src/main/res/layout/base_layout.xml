@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:filterTouchesWhenObscured="true">
+
+    <com.flipboard.bottomsheet.BottomSheetLayout
+        android:id="@+id/bottomsheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/tbBaseToolbar"
+                layout="@layout/base_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height" />
+
+            <View
+                android:id="@+id/vDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_6dp"
+                android:layout_below="@+id/tbBaseToolbar"
+                android:background="@color/offWhite"
+                android:visibility="gone" />
+
+            <ViewStub
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/vDivider"
+                android:orientation="vertical"
+                />
+            <include
+                android:layout_below="@id/tbBaseToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/toolbar_height"
+                layout="@layout/no_internet_layout"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ProgressBar
+                    android:layout_width="@dimen/_45dp"
+                    android:layout_height="@dimen/_45dp" />
+                />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </com.flipboard.bottomsheet.BottomSheetLayout>
+</RelativeLayout>

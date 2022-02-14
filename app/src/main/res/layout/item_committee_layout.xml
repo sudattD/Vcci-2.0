@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_4dp"
+    android:layout_marginTop="@dimen/_8dp"
+    android:layout_marginRight="@dimen/_4dp"
+    android:paddingBottom="@dimen/_16dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="@dimen/_8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/sr_no"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:background="@color/dark_grey" />
+
+
+            <TextView
+                android:id="@+id/tv_sr_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1.5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="normal"
+                tools:text="Committee Name" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/txt_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:background="@color/dark_grey" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1.5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="normal"
+                tools:text="Chairman Name" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/company_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:background="@color/dark_grey" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1.5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="normal"
+                tools:text="1234567890" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/mobile"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:background="@color/dark_grey" />
+
+            <TextView
+                android:id="@+id/tv_mobile_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1.5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="normal"
+                tools:text="1234567890" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/phone"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:background="@color/dark_grey" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1.5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="normal"
+                tools:text="123456789" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/phone_r"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:background="@color/dark_grey" />
+
+            <TextView
+                android:id="@+id/tv_phone_r"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1.5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="normal"
+                tools:text="Mobile" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/txt_email"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_12dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:background="@color/dark_grey" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_weight="1.5"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11dp"
+                android:textStyle="normal"
+                tools:text="Office Incharge" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:weightSum="2" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
