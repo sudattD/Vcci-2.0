@@ -1,41 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_gradient"
-
-    android:orientation="vertical">
-
+    android:background="@android:color/white" >
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="67dp"
-        android:layout_height="67dp"
-        android:src="@drawable/ic_sbnri_logo"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread">
-
-    </ImageView>
-
+        android:id="@+id/imgLogo"
+        android:layout_width="196dp"
+        android:layout_height="196dp"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:src="@drawable/splash_icon" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="SB NRI"
-        android:layout_marginTop="@dimen/_12dp"
-        android:textColor="@color/white"
-        android:textSize="@dimen/font_26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:textSize="@dimen/_10dp"
+        android:textStyle="normal"
+        android:layout_above="@+id/ibp_logo"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:text="Powered By :" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ibp_logo"
+        android:layout_width="@dimen/_72dp"
+        android:layout_height="@dimen/_60dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ibp_logo_splash" />
+
+
+</RelativeLayout>

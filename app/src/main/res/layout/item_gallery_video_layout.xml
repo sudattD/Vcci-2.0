@@ -21,7 +21,7 @@
             android:layout_width="@dimen/_96dp"
             android:layout_height="@dimen/_72dp">
 
-            <vcci.consumer.android.util.RoundRectCornerImageView
+            <sbnri.consumer.android.util.RoundRectCornerImageView
                 android:id="@+id/iv_event"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

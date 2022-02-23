@@ -248,7 +248,7 @@
     </style>
 
     <style name="ActionName" parent="FontMedium">
-        <item name="android:textColor">@color/general_text</item>
+        <item name="android:textColor">@color/vcci_blue</item>
         <item name="android:textSize">@dimen/text_small</item>
         <item name="android:lineSpacingMultiplier">1.2</item>
         <item name="android:gravity">center</item>
@@ -258,7 +258,7 @@
         <item name="android:text">Coming Soon</item>
         <item name="android:textSize">@dimen/text_30sp</item>
         <item name="android:lineSpacingMultiplier">1.2</item>
-        <item name="android:textColor">@color/general_text</item>
+        <item name="android:textColor">@color/vcci_blue</item>
         <item name="android:gravity">center</item>
     </style>
 
