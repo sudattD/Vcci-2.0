@@ -14,10 +14,10 @@
 
 
       <ImageView
-          android:id="@+id/imageView"
-          android:layout_width="@dimen/_10dp"
-          android:layout_height="@dimen/_16dp"
-          android:background="@drawable/back"
+          android:id="@+id/iv_back"
+          android:layout_width="@dimen/_22dp"
+          android:layout_height="@dimen/_22dp"
+          android:background="@drawable/ic_baseline_arrow_back_ios_24"
           android:layout_centerVertical="true">
 
       </ImageView>
@@ -27,9 +27,8 @@
           style="@style/PartialToolbarTitle"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
-          android:layout_marginStart="@dimen/_20dp"
           android:layout_centerInParent="true"
-          android:layout_centerVertical="true"
+          android:gravity="center"
           tools:text="Services" />
   </RelativeLayout>
 

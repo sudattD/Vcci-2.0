@@ -7,22 +7,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_menu_title"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35dp"
-            android:layout_alignParentTop="true"
-            android:background="@color/transparent_black"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_16dp"
-            tools:text="Upcoming Events" />
 
         <RelativeLayout
             android:id="@+id/rl_committee_listing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/tv_menu_title"
             android:layout_marginTop="@dimen/_2dp"
             android:visibility="visible">
 

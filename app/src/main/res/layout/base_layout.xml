@@ -22,6 +22,7 @@
                 android:id="@+id/tbBaseToolbar"
                 layout="@layout/base_toolbar"
                 android:layout_width="match_parent"
+
                 android:layout_height="@dimen/toolbar_height" />
 
             <View

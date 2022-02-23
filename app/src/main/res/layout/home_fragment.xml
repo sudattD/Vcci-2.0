@@ -17,7 +17,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/extra_light_gray"
-
                 android:orientation="vertical">
 
 
@@ -33,19 +32,19 @@
                             android:minHeight="@dimen/_220dp">
 
                             <androidx.viewpager.widget.ViewPager
-                                android:id="@+id/vpHomeBanner"
+                                android:id="@+id/home_viewPager"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent" />
+                                android:layout_height="@dimen/_220dp" />
 
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/rvCircleIndicator"
-                                android:layout_width="wrap_content"
+                            <com.google.android.material.tabs.TabLayout
+                                android:layout_below="@id/home_viewPager"
+                                android:id="@+id/indicator"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginBottom="@dimen/_12dp"
-                                tools:listitem="@layout/item_circle_indicator" />
-
+                                app:tabBackground="@drawable/indicator_selector"
+                                app:tabGravity="center"
+                                app:tabIndicatorGravity="bottom"
+                                app:tabIndicatorHeight="0dp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -56,7 +55,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20dp"
                     android:layout_marginBottom="@dimen/_32dp"
                     android:orientation="vertical">
 

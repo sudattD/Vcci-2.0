@@ -12,7 +12,6 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:fontFamily">@font/regular</item>
-        <item name="android:windowLightStatusBar">true</item>
 
 
         <!--  <item name="android:colorBackground">@color/colorPrimary</item> -->
@@ -56,7 +55,8 @@
 
     <style name="ActionHeader" parent="FontMedium">
         <item name="android:textSize">@dimen/text_normal</item>
-        <item name="android:textColor">@color/header_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_vcci</item>
         <item name="android:lineSpacingMultiplier">1.2</item>
     </style>
     <style name="NestedScrollViewScrollBarStyle">
@@ -77,8 +77,8 @@
     </style>
 
     <style name="PartialToolbarTitle" parent="FontBold">
-        <item name="android:textSize">@dimen/font_18sp</item>
-        <item name="android:textColor">@color/darkBlueGrey</item>
+        <item name="android:textSize">@dimen/font_17sp</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:lineSpacingMultiplier">0.1</item>
 
     </style>
@@ -251,6 +251,14 @@
         <item name="android:textColor">@color/general_text</item>
         <item name="android:textSize">@dimen/text_small</item>
         <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="comingSoon" parent="FontBold">
+        <item name="android:text">Coming Soon</item>
+        <item name="android:textSize">@dimen/text_30sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textColor">@color/general_text</item>
         <item name="android:gravity">center</item>
     </style>
 

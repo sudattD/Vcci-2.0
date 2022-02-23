@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="sbnri.consumer.android">
+    package="vcci.consumer.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -21,7 +21,7 @@
         android:required="false" />
 
     <application
-        android:name=".SBNRIApp"
+        android:name="vcci.consumer.android.SBNRIApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
@@ -41,7 +41,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <activity
-            android:name=".splash.SplashActivity"
+            android:name="vcci.consumer.android.splash.SplashActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -81,53 +81,53 @@
         </activity>
 
         <activity
-            android:name=".home.HomeActivity"
+            android:name="vcci.consumer.android.home.HomeActivity"
             android:label="SBNRI"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
-        <activity android:name=".aboutus.AboutUsActivity"
+        <activity android:name="vcci.consumer.android.aboutus.AboutUsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
-        <activity android:name=".committees.CommitteesActivity"
+        <activity android:name="vcci.consumer.android.committees.CommitteesActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
-        <activity android:name=".dignnitaries.DignitariesActivity"
+        <activity android:name="vcci.consumer.android.dignnitaries.DignitariesActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name=".onboarding.OnBoardingActivity"
+            android:name="vcci.consumer.android.onboarding.OnBoardingActivity"
             android:label="SBNRI"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".events.EventsActivity"
+        <activity android:name="vcci.consumer.android.events.EventsActivity"
             android:label="SBNRI"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".events.EventDetailsActivity"
+        <activity android:name="vcci.consumer.android.events.EventDetailsActivity"
             android:label="SBNRI"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".membership.MembershipActivity"
+        <activity android:name="vcci.consumer.android.membership.MembershipActivity"
             android:label="SBNRI"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".gallery.GalleryActivity"
+        <activity android:name="vcci.consumer.android.gallery.GalleryActivity"
             android:label="SBNRI"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".EmailConfirmation.EmailConfirmationActivity"
+            android:name="vcci.consumer.android.EmailConfirmation.EmailConfirmationActivity"
             android:label="SBNRI"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize"
             />
 
         <receiver
-            android:name=".receivers.NetworkChangeReceiver"
+            android:name="vcci.consumer.android.receivers.NetworkChangeReceiver"
             android:enabled="@bool/configuration_for_receiver_service"
             android:exported="@bool/configuration_for_receiver_service">
             <intent-filter>

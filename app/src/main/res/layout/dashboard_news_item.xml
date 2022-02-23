@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_96dp"
+    android:id="@+id/rl_news_item"
+    android:padding="@dimen/_8dp">
+
+    <ImageView
+        android:id="@+id/iv_news_thumb"
+        android:layout_width="@dimen/_96dp"
+        android:layout_height="@dimen/_72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ibp_logo_splash" />
+
+    <TextView
+        android:id="@+id/tv_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginLeft="@dimen/_8dp"
+        android:layout_toRightOf="@+id/iv_news_thumb"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="Lorem Epsum"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12dp" />
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey" />
+
+</RelativeLayout>

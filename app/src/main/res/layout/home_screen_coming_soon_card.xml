@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <sbnri.consumer.android.common.CircleImageView
+                <vcci.consumer.android.common.CircleImageView
                     android:id="@+id/hdfc"
                     android:layout_width="@dimen/_60dp"
                     android:layout_height="@dimen/_60dp"
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="@dimen/_16dp">
-                <sbnri.consumer.android.common.CircleImageView
+                <vcci.consumer.android.common.CircleImageView
                     android:id="@+id/icici"
                     android:layout_width="@dimen/_60dp"
                     android:layout_height="@dimen/_60dp"
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="@dimen/_16dp">
-                <sbnri.consumer.android.common.CircleImageView
+                <vcci.consumer.android.common.CircleImageView
                     android:id="@+id/axis"
                     android:layout_width="@dimen/_60dp"
                     android:layout_height="@dimen/_60dp"
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="@dimen/_16dp">
-                <sbnri.consumer.android.common.CircleImageView
+                <vcci.consumer.android.common.CircleImageView
                     android:id="@+id/citi"
                     android:layout_width="@dimen/_60dp"
                     android:layout_height="@dimen/_60dp"

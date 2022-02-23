@@ -23,6 +23,7 @@
     <dimen name="text_xnormal_15sp">@dimen/font_15sp</dimen>
     <dimen name="text_xxlarge">@dimen/font_24sp</dimen>
     <dimen name="text_xxxlarge">@dimen/font_34sp</dimen>
+    <dimen name="text_30sp">@dimen/font_30sp</dimen>
 
     <!--BottomNav text property-->
     <dimen name="design_bottom_navigation_text_size" tools:override="true">@dimen/font_8sp</dimen>

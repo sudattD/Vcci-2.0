@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
-                <sbnri.consumer.android.common.CircleImageView
+                <vcci.consumer.android.common.CircleImageView
                     android:id="@+id/profile_image"
                     android:layout_width="@dimen/_100dp"
                     android:layout_height="@dimen/_100dp"
