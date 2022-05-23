@@ -16,6 +16,7 @@
         android:paddingLeft="@dimen/home_margin_left"
         android:paddingBottom="@dimen/_6dp"
         android:text="Welcome to"
+        android:visibility="gone"
         tools:ignore="RtlSymmetry" />
 
     <androidx.recyclerview.widget.RecyclerView

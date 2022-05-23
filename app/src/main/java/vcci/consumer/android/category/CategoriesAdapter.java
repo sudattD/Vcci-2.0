@@ -47,11 +47,11 @@ class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.MyViewHol
             holder.tv_catgeory.setTypeface(Typeface.DEFAULT_BOLD);
             holder.tv_catgeory.setTextColor(Color.BLACK);
             holder.tv_catgeory.setGravity(Gravity.CENTER);
-            holder.rl_category.setBackgroundColor(Color.WHITE);
+           // holder.rl_category.setBackgroundColor(Color.WHITE);
             holder.v_border.setVisibility(View.GONE);
         } else {
             holder.tv_catgeory.setText(categoriesItem.getTitle());
-            holder.tv_catgeory.setTextColor(Color.WHITE);
+            holder.tv_catgeory.setTextColor(Color.BLACK);
             holder.tv_catgeory.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
             //holder.rl_category.setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
             holder.v_border.setVisibility(View.VISIBLE);

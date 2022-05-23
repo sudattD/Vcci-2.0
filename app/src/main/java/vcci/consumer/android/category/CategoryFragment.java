@@ -5,12 +5,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,6 +44,7 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
     @BindView(R.id.rvCategoryItems)
     RecyclerView rvCategoryItems;
 
+    ArrayList<CategoryActionItem> categoryActionItems;
     CategoryItemsAdapter mAdapter;
 
     private CategoriesAdapter categoriesAdapter;
@@ -50,12 +53,12 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
 
     @Override
     protected BaseView getBaseView() {
-        return null;
+        return this;
     }
 
     @Override
     protected void callDependencyInjector(DependencyInjectorComponent injectorComponent) {
-
+            injectorComponent.injectDependencies(this);
     }
 
     @Override
@@ -67,6 +70,7 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this,view);
+        initView();
         onCommonItemClickListener = this;
     }
 
@@ -80,7 +84,6 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        String token = sbnriPref.getString("fcm_token");
         //Log.d(TAG, "getSliderMenu: " + token);
         Call<CategoriesResponse> call = apiService.getCategoriesList(Constants.version, Constants.DEVICE_TYPE, "get-categories",
                 "token", "123456", "1", "100");
@@ -97,6 +100,10 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
                 categoriesItemsWithHeader.addAll(categoriesItemsList);
                 //Log.d(TAG, "Categories received: " + categoriesItemsWithHeader.size());
                 categoriesAdapter = new CategoriesAdapter(context, categoriesItemsWithHeader, onCommonItemClickListener);
+
+                LinearLayoutManager manager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+                rvCategoryItems.setLayoutManager(manager);
+
                 rvCategoryItems.setAdapter(categoriesAdapter);
 
             }
@@ -107,6 +114,10 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
                // Log.e(TAG, t.toString());
             }
         });
+    }
+
+    private void setUpCategoryItems() {
+        categoryActionItems = new ArrayList<>();
     }
 
     @Override
@@ -121,11 +132,22 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
 
     @Override
     public void showToastMessage(String toastMessage, boolean isErrortoast) {
-
+        Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onItemClick(View view, Object object) {
+
+        if (object instanceof CategoriesItem) {
+            if(((CategoriesItem) object).getId() == 1) {
+                //All
+                showToastMessage("All clicked",false);
+            }
+            else if(((CategoriesItem) object).getId() == 2)
+            {
+
+            }
+        }
 
     }
 }

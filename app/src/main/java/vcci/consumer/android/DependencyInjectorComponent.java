@@ -11,6 +11,7 @@ import vcci.consumer.android.base.activity.BaseActivityComponent;
 import vcci.consumer.android.base.activity.BaseViewModule;
 import vcci.consumer.android.base.contract.BaseView;
 import vcci.consumer.android.base.schedulers.SchedulerProvider;
+import vcci.consumer.android.category.CategoryFragment;
 import vcci.consumer.android.committees.CommitteesActivity;
 import vcci.consumer.android.data.local.SBNRILocalDataSource;
 import vcci.consumer.android.data.local.SBNRIPref;
@@ -72,6 +73,6 @@ public interface DependencyInjectorComponent {
     void injectDependencies(EventDetailsActivity activity);
     void injectDependencies(MembershipActivity activity);
     void injectDependencies(GalleryActivity activity);
-    void injectDependencies(NewsFragment fragment);
+    void injectDependencies(CategoryFragment fragment);
 
 }

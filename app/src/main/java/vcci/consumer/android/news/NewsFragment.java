@@ -78,7 +78,6 @@ public class NewsFragment extends BaseFragment implements BaseView , OnCommonIte
 
     @Override
     protected void callDependencyInjector(DependencyInjectorComponent injectorComponent) {
-        injectorComponent.injectDependencies(this);
     }
 
     @Override
