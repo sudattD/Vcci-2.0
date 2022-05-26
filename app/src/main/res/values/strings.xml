@@ -308,4 +308,5 @@
     <string name="password">Password :</string>
     <string name="please_enter_your_password">Please enter your password</string>
     <string name="txt_login">Login</string>
+    <string name="under_maintenance">Page Currently Under Maintenance</string>
 </resources>

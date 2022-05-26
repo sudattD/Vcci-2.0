@@ -1,5 +1,6 @@
 package vcci.consumer.android.category;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,6 +25,7 @@ import vcci.consumer.android.R;
 import vcci.consumer.android.adapters.OnCommonItemClickListener;
 import vcci.consumer.android.api.ApiClient;
 import vcci.consumer.android.api.ApiInterface;
+import vcci.consumer.android.base.activity.BaseActivity;
 import vcci.consumer.android.base.activity.BaseFragment;
 import vcci.consumer.android.base.contract.BaseView;
 import vcci.consumer.android.constants.Constants;
@@ -80,7 +82,7 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
     }
 
     private void setupCategoryItems() {
-
+        showProgress();
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
@@ -90,6 +92,7 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
         call.enqueue(new Callback<CategoriesResponse>() {
             @Override
             public void onResponse(Call<CategoriesResponse> call, Response<CategoriesResponse> response) {
+                hideProgress();
                 assert response.body() != null;
                 List<CategoriesItem> categoriesItemsWithHeader = new ArrayList<>();
                 CategoriesItem categoriesItem = new CategoriesItem();
@@ -110,6 +113,7 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
 
             @Override
             public void onFailure(Call<CategoriesResponse> call, Throwable t) {
+                hideProgress();
                 // Log error here since request failed
                // Log.e(TAG, t.toString());
             }
@@ -122,12 +126,12 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
 
     @Override
     public void showProgress() {
-
+        ((BaseActivity)activity).rl_progress.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideProgress() {
-
+        ((BaseActivity) activity).rl_progress.setVisibility(View.GONE);
     }
 
     @Override
@@ -139,14 +143,12 @@ public class CategoryFragment extends BaseFragment implements BaseView, OnCommon
     public void onItemClick(View view, Object object) {
 
         if (object instanceof CategoriesItem) {
-            if(((CategoriesItem) object).getId() == 1) {
-                //All
-                showToastMessage("All clicked",false);
-            }
-            else if(((CategoriesItem) object).getId() == 2)
-            {
-
-            }
+            int id = ((CategoriesItem) object).getId();
+            String title = ((CategoriesItem) object).getTitle();
+            Intent toDetails = new Intent(context, CategoryDetailsActivity.class);
+            toDetails.putExtra("categoryID", id);
+            toDetails.putExtra("title", title);
+            startActivity(toDetails);
         }
 
     }

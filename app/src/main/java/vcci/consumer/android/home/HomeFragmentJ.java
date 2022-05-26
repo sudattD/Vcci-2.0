@@ -158,7 +158,6 @@ public class HomeFragmentJ extends BaseFragment implements HomeContract.HomeFrag
 
     @Override
     public void showProgress() {
-
         ((BaseActivity)activity).rl_progress.setVisibility(View.VISIBLE);
     }
 

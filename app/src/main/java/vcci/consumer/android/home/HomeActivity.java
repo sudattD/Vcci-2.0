@@ -160,11 +160,8 @@ public class HomeActivity extends BaseActivity implements BottomNavigationView.O
             case HOME_FRAG:
                 loadFragment(HomeFragmentJ.newInstance());
                 break;
-
             case PROFILE_FRAG:
-
                 loadFragment(CategoryFragment.newInstance());
-
                 break;
             case NEWS_FRAG:
                 loadFragment(NewsFragment.newInstance());

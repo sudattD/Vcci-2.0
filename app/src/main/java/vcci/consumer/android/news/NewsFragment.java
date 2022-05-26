@@ -46,6 +46,13 @@ import static androidx.constraintlayout.widget.Constraints.TAG;
 public class NewsFragment extends BaseFragment implements BaseView , OnCommonItemClickListener {
 
 
+    public static NewsFragment newInstance() {
+        NewsFragment fragment = new NewsFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @BindView(R.id.home_viewPager)
     ViewPager viewPager1;
 
@@ -64,20 +71,15 @@ public class NewsFragment extends BaseFragment implements BaseView , OnCommonIte
     private List<LeftAdItem> leftAdItems;
     private List<BottomAdsItem> bottomAdsItems;
 
-    public static NewsFragment newInstance() {
-        NewsFragment fragment = new NewsFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     protected BaseView getBaseView() {
-        return null;
+        return this;
     }
 
     @Override
     protected void callDependencyInjector(DependencyInjectorComponent injectorComponent) {
+        injectorComponent.injectDependencies(this);
     }
 
     @Override
@@ -91,12 +93,12 @@ public class NewsFragment extends BaseFragment implements BaseView , OnCommonIte
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this,view);
         listener = this;
-        getNewsDataList();
+        initView();
     }
 
     @Override
     public void initView() {
-
+        getNewsDataList();
     }
 
     @Override

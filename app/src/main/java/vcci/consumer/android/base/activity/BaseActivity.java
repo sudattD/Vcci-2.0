@@ -114,7 +114,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFrag
     }
 
     private void initialiseBaseActivityComponent() {
-
         activityComponent = DaggerBaseActivityComponent.builder()
                 .sBNRIAppComponent(((SBNRIApp) getApplicationContext()).getComponent())
                 .baseActivityModule(new BaseActivityModule(this))
@@ -245,5 +244,12 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFrag
         ActivityUtils.sbnriToast(context, message, duration, isErrorToast);
     }
 
+    protected void showProgressBase() {
+        rl_progress.setVisibility(View.VISIBLE);
+    }
+
+    protected void hideProgressBase() {
+        rl_progress.setVisibility(View.GONE);
+    }
 
 }
