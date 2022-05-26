@@ -1,5 +1,5 @@
-# SBNRI-Android
-SBNRI-Android codebase
+# MDI-VCCI-Android
+MDI-VCCI-Android codebase
 
 
 Android code-base with MVP architecture and using Dagger-2 dependency injection .
