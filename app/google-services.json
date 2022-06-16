@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "576493033551",
+    "project_id": "mdi-vcci",
+    "storage_bucket": "mdi-vcci.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576493033551:android:84ab46c784eb53afc5f23a",
+        "android_client_info": {
+          "package_name": "vcci.consumer.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576493033551-t9fjfdgofgi96bse8e70fqsklrbmckem.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vcci.consumer.android",
+            "certificate_hash": "98759f1b7e5ac64f12c4386ab6030a525e3d9756"
+          }
+        },
+        {
+          "client_id": "576493033551-7esodgf45p7n8iqkcbmhheukvq85acld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQk0tmYNnNfpiRVLtLZfpNsgIAPti2kkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576493033551-7esodgf45p7n8iqkcbmhheukvq85acld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
