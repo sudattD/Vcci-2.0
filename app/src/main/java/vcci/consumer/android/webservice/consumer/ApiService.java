@@ -12,7 +12,6 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.QueryMap;
 import retrofit2.http.Url;
-import vcci.consumer.android.data.models.GenerateUploadUrl;
 import vcci.consumer.android.data.models.login.LoginResponse;
 import vcci.consumer.android.webservice.model.SBNRIResponse;
 
@@ -26,9 +25,6 @@ public interface ApiService {
     @POST("generate_link_for_email")
     Flowable<SBNRIResponse> generateLinkForEmail(@Body HashMap<String, Object> params);
 
-
-    @POST("generate_upload_url")
-    Flowable<SBNRIResponse<GenerateUploadUrl>> getFilePath(@Body HashMap<String, Object> params); // marked
 
     @PUT
     Completable uploadFileOnAmazon(@Header("Content-Length") long length, @Url String url, @Body RequestBody image);

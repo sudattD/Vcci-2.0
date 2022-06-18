@@ -21,7 +21,6 @@ import vcci.consumer.android.R;
 import vcci.consumer.android.base.contract.BaseView;
 import vcci.consumer.android.base.schedulers.SchedulerProvider;
 import vcci.consumer.android.data.local.SBNRIRepository;
-import vcci.consumer.android.data.models.GenerateUploadUrl;
 import vcci.consumer.android.util.NetworkUtils;
 import vcci.consumer.android.webservice.ApiCallTags;
 import vcci.consumer.android.webservice.ApiParameters;
@@ -321,97 +320,6 @@ public class AttachFile implements Parcelable {
         this.contentType = contentType;
     }
 
-    public void upload(final SBNRIRepository repository, final SchedulerProvider schedulerProvider, final BaseView view, final BaseView.UploadImage callback) {
-        if (view != null) {
-            view.showProgress();
-        }
-        if (Type.equalsIgnoreCase("image")) {
-            if (!FilePath.endsWith(".jpeg")) {
-                FilePath = FilePath + ".jpeg";
-                FileName = FileName + ".jpeg";
-            }
-        }
-
-        HashMap<String, Object> params = new HashMap<>();
-      //  params.put(ApiParameters.KEY, FilePath);
-       // String fileType = Type + "/" + GeneralUtilsKt.getFileExtension(FileName);
-
-        String fileType = getType();
-        params.put(ApiParameters.Companion.getDOC_TYPE(), fileType);
-        params.put(ApiParameters.Companion.getCONTENT_TYPE(),getContentType());
-
-        NetworkUtils.makeNetworkCall(ApiCallTags.GET_FILE_PATH, repository.getFilePath(params), schedulerProvider, new NetworkUtils.ApiCallBackEmptyImplementer() {
-            @Override
-            public void onSuccess(String callTag, SBNRIResponse response, HashMap<String, Object> extras) {
-                if (response.getData() != null && response.getData() instanceof GenerateUploadUrl) {
-                    Logger.d(" response get file path - " + new Gson().toJson(response.getData()));
-                    //TODO decrypt when you have all the necessary params
-                    /*String filePath = Optional.orElse(((HashMap<String, Object>) response.getData()).get(ApiParameters.S3_URL), "").get().toString();
-                    if(!TextUtils.isEmpty(filePath))
-                        filePath = AuthorizationUtils.decrypt()
-                    String s3url = Optional.orElse(((HashMap<String, Object>) response.getData()).get(ApiParameters.S3_URL), "").get().toString();*/
-
-                    GenerateUploadUrl generateUploadUrl = (GenerateUploadUrl) response.getData();
-                    String path =  generateUploadUrl.getUrl();
-                    try {
-                        uploadOnAmazon(path, repository, view, callback, schedulerProvider, fileType);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(String callTag, SBNRIResponse response, HashMap<String, Object> extras) {
-                Logger.t("FILE").d("FILE PATH ERROR! ");
-                if (view != null) {
-                    view.hideProgress();
-                }
-               // retryUploadDialog(repository, schedulerProvider, view, callback, picasso);
-            }
-
-            @Override
-            public void onError(String callTag, Throwable e, HashMap<String, Object> extras) {
-                handleError(view, e, callback.getAppContext());
-            }
-
-            @Override
-            public void onSessionExpired() {
-                super.onSessionExpired();
-                Logger.t("401").d("401 SESSION EXPIRED ");
-                if (view != null) {
-                    view.hideProgress();
-                }
-            }
-        });
-    }
-
-    private void uploadOnAmazon(final String path, SBNRIRepository repository, final BaseView view, final BaseView.UploadImage callback, SchedulerProvider schedulerProvider, String fileType) throws IOException {
-
-        File image = new File(localFilePath);
-        Logger.d(" FilePath S3 Upload " + path);
-
-        RequestBody reqFile = RequestBody.create(MediaType.parse(fileType), image);
-
-
-        repository.uploadFileOnAmazon(reqFile.contentLength(),path, reqFile).subscribeOn(schedulerProvider.io()).observeOn(schedulerProvider.ui())
-                .subscribeWith(new DisposableCompletableObserver() {
-                    @Override
-                    public void onComplete() {
-                        Logger.t("FILE").d("FILE ATTACHED");
-                        if (view != null) {
-                            view.hideProgress();
-                        }
-                        // Update image in UI
-                        callback.updateImageAfterUpload(FilePath);
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        handleError(view, e, callback.getAppContext());
-                    }
-                });
-    }
 
     private void handleError(BaseView view, Throwable e, Context context) {
         if (view != null) {

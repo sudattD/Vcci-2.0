@@ -9,7 +9,6 @@ import io.reactivex.Completable;
 import io.reactivex.Flowable;
 import okhttp3.RequestBody;
 import vcci.consumer.android.base.schedulers.SchedulerProvider;
-import vcci.consumer.android.data.models.GenerateUploadUrl;
 import vcci.consumer.android.data.models.login.LoginResponse;
 import vcci.consumer.android.data.source.SBNRIDataSource;
 import vcci.consumer.android.webservice.model.SBNRIResponse;
@@ -38,10 +37,6 @@ public class SBNRILocalDataSource implements SBNRIDataSource {
         return null;
     }
 
-    @Override
-    public Flowable<SBNRIResponse<GenerateUploadUrl>> getFilePath(HashMap<String, Object> params) {
-        return null;
-    }
 
     @Override
     public Completable uploadFileOnAmazon(long size,String url, RequestBody image) {

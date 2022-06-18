@@ -29,6 +29,8 @@ import vcci.consumer.android.data.models.committee.Committees;
 
 import static androidx.constraintlayout.widget.Constraints.TAG;
 
+import com.orhanobut.logger.Logger;
+
 public class CommitteesActivity extends BaseActivity implements BaseView {
 
     @BindView(R.id.rv_committee)
@@ -85,6 +87,7 @@ public class CommitteesActivity extends BaseActivity implements BaseView {
             public void onResponse(Call<CommitteeDataResponse> call, Response<CommitteeDataResponse> response) {
                 hideProgress();
                 assert response.body() != null;
+                Logger.d(CommitteesActivity.class.getSimpleName(),response.body());
                 Committees committees = response.body().getCommittees();
                 //tv_menu_title.setText(value);
 //                tv_menu_title.setText(committees.getTitle());

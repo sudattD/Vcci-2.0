@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.gson.Gson;
+import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -194,6 +196,7 @@ public class HomeFragmentJ extends BaseFragment implements HomeContract.HomeFrag
             public void onResponse(Call<DashboardResponse> call, Response<DashboardResponse> response) {
                 hideProgress();
                 assert response.body() != null;
+                Logger.d(HomeFragmentJ.class.getSimpleName(),new Gson().toJson(response.body()));
 
                 bannersItemList = response.body().getBanners();
                 viewPager1.setAdapter(new DashboardBannersSliderAdapter(getContext(), bannersItemList));

@@ -79,8 +79,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFrag
     @Inject
     public SBNRIPref sbnriPref;
 
-
-
     protected BaseActivityComponent activityComponent;
     private BasePresenterImp basePresenterImp;
 
